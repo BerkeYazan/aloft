@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+title: "ALOFT: a dataset and pipeline for multidimensional analysis of literary creativity"
+message: "If you use this dataset or code, please cite the paper below."
+type: software
+authors:
+  - given-names: Berke
+    family-names: Yazan
+    affiliation: "Utrecht University, Department of Information and Computing Sciences"
+  - given-names: Almila
+    family-names: "Akdağ"
+    affiliation: "Utrecht University, Department of Information and Computing Sciences"
+  - given-names: Davide
+    family-names: "Dell'Anna"
+    affiliation: "Utrecht University, Department of Information and Computing Sciences"
+preferred-citation:
+  type: conference-paper
+  title: "What Makes Literary Quotes Stand Out? A Multidimensional Analysis of Literary Creativity"
+  authors:
+    - given-names: Berke
+      family-names: Yazan
+    - given-names: Almila
+      family-names: "Akdağ"
+    - given-names: Davide
+      family-names: "Dell'Anna"
+  conference:
+    name: "International Conference on Computational Creativity (ICCC 2026)"
+  year: 2026
+# Add the DOI here once the proceedings assign one.
+# doi: "10.xxxx/xxxxx"
+# Confirm the code licence. The repository LICENSE file currently applies.

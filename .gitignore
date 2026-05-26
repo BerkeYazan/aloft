@@ -1,0 +1,64 @@
+# Virtual environment
+venv/
+.venv/
+env/
+
+# Python caches and build artifacts
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+build/
+dist/
+
+# Credentials. Never commit these. See docs and .env.example.
+.env
+*.env
+!.env.example
+*service-account*.json
+*credentials*.json
+vision-*.json
+
+# IDE and editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Icon?
+
+# Logs
+*.log
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Data areas. Restricted, raw and interim data is never published.
+# See docs/DATA.md for the tiered release policy.
+data/raw/
+data/interim/
+data/restricted/
+data/outputs/
+data/models/
+models/
+
+# Master's thesis PDF and other large binaries are kept out of the public repo.
+*.pdf
+
+# Full local ALOFT CSVs stay out of git. The trimmed release versions ending
+# in _release.csv are the public dataset and are tracked.
+data/processed/public/*.csv
+!data/processed/public/*_release.csv
+
+# Leftover empty folders from the original directory layout. The sandbox could
+# not delete these; ignore them so they never end up in git. You can also just
+# delete them in Finder, in which case these lines become no-ops.
+Master's Thesis Stuff/
+Analysis/
+Data Cleaning/
+Neutral Snippet Dataset/
+config/
+outputs/

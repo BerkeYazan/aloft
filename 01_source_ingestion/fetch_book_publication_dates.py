@@ -9,6 +9,9 @@ import os
 import argparse
 from typing import List, Tuple, Dict, Set, Optional, Any
 from logging.handlers import RotatingFileHandler
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # --- Setup Logging ---
 # A more detailed format for better debugging
@@ -29,8 +32,10 @@ logging.basicConfig(level=logging.INFO,
 # --- Configuration ---
 WIKIDATA_API_URL = "https://query.wikidata.org/sparql"
 WIKIDATA_SEARCH_URL = "https://www.wikidata.org/w/api.php"
-# It's good practice to let services know who you are.
-USER_AGENT = "ThesisProject-BookDateFetcher/1.1 (Contact: b.yazan@uu.nl)"
+# Wikidata asks API clients to identify themselves with contact details.
+# Set WIKIDATA_CONTACT_EMAIL in .env; the placeholder default also works.
+CONTACT_EMAIL = os.getenv("WIKIDATA_CONTACT_EMAIL", "your-email@example.com")
+USER_AGENT = f"ALOFT-BookDateFetcher/1.1 (Contact: {CONTACT_EMAIL})"
 HEADERS = {'Accept': 'application/sparql-results+json', 'User-Agent': USER_AGENT}
 MAX_RETRIES = 3
 INITIAL_BACKOFF = 2

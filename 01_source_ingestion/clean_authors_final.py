@@ -1,13 +1,20 @@
+import os
 import pandas as pd
 import requests
 import time
 from thefuzz import fuzz
 import re
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # --- Configuration ---
 WIKIDATA_API_URL = "https://query.wikidata.org/sparql"
 WIKIDATA_SEARCH_URL = "https://www.wikidata.org/w/api.php"
-USER_AGENT = "MyThesisProject/1.0 (b.yazan@uu.nl)"
+# Wikidata asks API clients to identify themselves with contact details.
+# Set WIKIDATA_CONTACT_EMAIL in .env; the placeholder default also works.
+CONTACT_EMAIL = os.getenv("WIKIDATA_CONTACT_EMAIL", "your-email@example.com")
+USER_AGENT = f"ALOFT-Pipeline/1.0 ({CONTACT_EMAIL})"
 HEADERS = {'Accept': 'application/sparql-results+json', 'User-Agent': USER_AGENT}
 SIMILARITY_THRESHOLD = 90
 PERSON_KEYWORDS = [

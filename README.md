@@ -2,7 +2,8 @@
 
 ALOFT is a dataset and analysis pipeline for studying what makes literary
 quotes stand out. It accompanies the paper "What Makes Literary Quotes Stand
-Out? A Multidimensional Analysis of Literary Creativity" (ICCC 2026).
+Out? A Multidimensional Analysis of Literary Creativity" (ICCC 2026), included
+here as [What_Makes_Literary_Quotes_Stand_Out.pdf](What_Makes_Literary_Quotes_Stand_Out.pdf).
 
 This repository contains the full pipeline that builds the dataset and runs
 the analysis. It is organised so that someone who has never seen the project
